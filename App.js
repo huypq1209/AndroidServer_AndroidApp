@@ -21,7 +21,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import ShoppingCartIcon  from './components/ShoppingCartIcon'
 import { Provider } from 'react-redux';
 
-// import store from '../store';
+
 const Stack = createStackNavigator(
 )
 
@@ -33,9 +33,6 @@ const App = () => {
 
         headerRight: () => (
           <View style={{ backgroundColor: 'none' }}>
-            {/* <Image 
-              style={{width:40,height:40,resizeMode:'contain',alignSelf:'center',margin:10}}
-              source= {require('./images/twitter.png')}/> */}
           </View>
         ),
       }} >
@@ -44,12 +41,7 @@ const App = () => {
             
           options={{headerRight:()=>{<ShoppingCartIcon/>}}}
         />
-        {/* <Stack.Screen name="Loading" component={Loading} 
-        options={{
-          
-          title:'',
-          headerTransparent:'false',
-          }} /> */}
+       
         <Stack.Screen name="Login" component={Login}
           options={{
             headerTransparent: 'false',
