@@ -9,7 +9,6 @@ import {
     Avatar,
     Title,
     Caption,
-
     TouchableRipple,
 } from 'react-native-paper';
 import * as Animatable from 'react-native-animatable';

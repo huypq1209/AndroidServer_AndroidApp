@@ -50,27 +50,27 @@ const Home = props => {
     }, [])
 
     const searchItem = (text) => {
-        if(text){
-        console.log(text)
-        
-        const newData = items2.filter(item => {
-            const itemData = item.name.toUpperCase();
-            const textData = text.toUpperCase();
-      
-            return itemData.indexOf(textData) > -1;
-          });
-          setItems(newData)
-          setSearch(text)
-        }else{
+        if (text) {
+            console.log(text)
+
+            const newData = items2.filter(item => {
+                const itemData = item.name.toUpperCase();
+                const textData = text.toUpperCase();
+
+                return itemData.indexOf(textData) > -1;
+            });
+            setItems(newData)
+            setSearch(text)
+        } else {
             setItems(items2)
             setSearch(text)
-        } 
-           
-            
+        }
+
+
     }
     const header = () => {
         return (
-            <Searchbar placeholder="Type here..." value={search}  onChangeText={(text) => searchItem(text) } />
+            <Searchbar placeholder="Type here..." value={search} onChangeText={(text) => searchItem(text)} />
         )
     }
     LogBox.ignoreAllLogs();
@@ -175,17 +175,17 @@ const Home = props => {
                 />
             </View>
 
-            <Searchbar placeholder="Type here..." value={search}  onChangeText={(text) => searchItem(text) } />
+            <Searchbar placeholder="Type here..." value={search} onChangeText={(text) => searchItem(text)} />
             <FlatList
 
-                style={{ margin: 5,marginBottom:50 }}
+                style={{ margin: 5, marginBottom: 50 }}
                 data={items}
                 renderItem={renderItem}
                 keyExtractor={(item) => item._id}
                 numColumns={2}
-                // ListHeaderComponent={header}
+            // ListHeaderComponent={header}
             />
-       </>
+        </>
 
 
 
